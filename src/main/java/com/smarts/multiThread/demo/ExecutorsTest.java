@@ -26,6 +26,7 @@ public class ExecutorsTest {
 				}
 			});
 		}
-		es.shutdown();
+//		es.shutdown();
+		es.shutdownNow();
 	}
 }

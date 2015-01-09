@@ -15,7 +15,7 @@
 	</properties>
 	<profiles>
 		<profile>
-			<id>product</id>
+			<id>dirPaceage</id>
 			<properties>
 				<app.dir>D:/learn-demo</app.dir>
 			</properties>
