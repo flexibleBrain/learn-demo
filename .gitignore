@@ -1,7 +1,12 @@
-/.idea
+.idea
 learn-demo.iml
 learn-demo.ipr
 learn-demo.iws
+dubbo-providers/dubbo-providers.iml
+dubbo-providers/dubbo-providers.ipr
+dubbo-providers/dubbo-providers.iws
+dubbo-interface/dubbo-interface.iml
+dubbo-consumer/dobbo-consumer.iml
 *.class
 target/
 .classpath
