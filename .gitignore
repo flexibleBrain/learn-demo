@@ -1,3 +1,7 @@
+/.idea
+learn-demo.iml
+learn-demo.ipr
+learn-demo.iws
 *.class
 target/
 .classpath
