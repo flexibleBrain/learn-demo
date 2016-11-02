@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * on 16-10-31 下午11:09
  */
 @Component
-@Service
+@Service()
 public class DemoProviders  implements FirstService{
     public String sayHello(String name) {
         System.out.println("receive name : "+name);
