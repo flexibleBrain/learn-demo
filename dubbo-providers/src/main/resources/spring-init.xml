@@ -8,10 +8,10 @@
         http://code.alibabatech.com/schema/dubbo  http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
     <!--<context:annotation-config/>-->
     <context:component-scan base-package="com.smarts.dubbo"/>
-    <dubbo:application name="hello-word-app"/>
-    <dubbo:registry address="zookeeper://127.0.0.1:2181" register="false" subscribe="false" dynamic="false"/>
-    <dubbo:protocol name="dubbo" port="20880" dispatcher="message" threadpool="fixed" threads="100"/>
+    <dubbo:application name="hello-word-app" owner="yxj" organization="yxj"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <dubbo:protocol name="dubbo" port="20880"/>
     <dubbo:annotation package="com.smarts.dubbo.providers"/>
-    <!--<dubbo:service interface="com.smarts.dubbo.service.FirstService" ref="demoProviders" />-->
-    <!--<bean id="demoProviders" class="com.smarts.dubbo.providers.DemoProviders"/>-->
-</beans>
+    <dubbo:service id="FirstService" interface="com.smarts.dubbo.service.FirstService" ref="demoProviders" />
+    <bean id="demoProviders" class="com.smarts.dubbo.providers.DemoProviders"/>
+    </beans>

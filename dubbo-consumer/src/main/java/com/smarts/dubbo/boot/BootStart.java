@@ -1,5 +1,7 @@
 package com.smarts.dubbo.boot;
 
+import com.alibaba.dubbo.rpc.service.EchoService;
+import com.alibaba.dubbo.rpc.service.GenericService;
 import com.smarts.dubbo.service.FirstService;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -14,6 +16,11 @@ public class BootStart {
         ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:spring*.xml");
         ctx.start();
         FirstService service = (FirstService)ctx.getBean("demoService");
+//        EchoService echoService = (EchoService)service;
+//        GenericService genericService = (GenericService)service;
+//        genericService.$invoke()
+//        String status = (String) echoService.$echo("ok");
+//        System.out.println(status+".................");
         System.out.println(service.sayHello("yxj"));
         System.out.println(service.sayHello("yxj1"));
         System.out.println(service.sayHello("yxj2"));

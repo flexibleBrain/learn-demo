@@ -9,7 +9,7 @@
 
     <context:component-scan base-package="com.smarts.dubbo.*"/>
     <dubbo:application name="consumer-of-helloworld-app"/>
-    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
     <dubbo:reference  id="demoService" interface="com.smarts.dubbo.service.FirstService"/>
 
     <!--<dubbo:consumer check="false"/>-->
