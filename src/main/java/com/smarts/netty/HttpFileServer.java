@@ -33,7 +33,7 @@ public class HttpFileServer {
                             ch.pipeline().addLast("http-aggregator",new HttpObjectAggregator(65536));
                             ch.pipeline().addLast("http-encoder",new HttpResponseEncoder());
                             ch.pipeline().addLast("http-chunked",new ChunkedWriteHandler());
-                            ch.pipeline().addLast("fileServerhander",new HttpFileServerHandler(url));
+                            ch.pipeline().addLast("fileServerhander",new HttpFileServerHandler1(url));
                         }
                     });
             ChannelFuture future = b.bind("127.0.0.1",port);
