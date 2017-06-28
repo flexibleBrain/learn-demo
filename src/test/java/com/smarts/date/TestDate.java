@@ -1,5 +1,9 @@
 package com.smarts.date;
 
+import org.junit.Test;
+
+import java.io.File;
+import java.io.IOException;
 import java.text.ParseException;
 import java.util.Map;
 import java.util.Properties;
@@ -7,11 +11,17 @@ import java.util.Set;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.junit.Test;
-
-import com.smarts.utils.DateUtils;
-
 public class TestDate {
+	@Test
+	public void testFile(){
+		try {
+			File file = new File("D:\\ebook");
+			System.out.println(file.getCanonicalPath());
+			System.out.println(file.getCanonicalFile());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
 	@Test
 	public  void printProperties(){
 //		System.out.println(System.getProperty("line.separator"));
