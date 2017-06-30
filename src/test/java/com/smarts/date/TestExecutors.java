@@ -12,9 +12,16 @@ import java.util.concurrent.TimeUnit;
  */
 public class TestExecutors {
     @Test
+    public void test22(){
+        int COUNT_BITS = Integer.SIZE - 3;
+        int RUNNING    = -1 << COUNT_BITS;
+        System.out.println(RUNNING);
+        System.out.println(RUNNING|0);
+    }
+    @Test
     public void testOne(){
-        ExecutorService e = Executors.newFixedThreadPool(3);
-        for(int i=0;i<3;i++){
+        ExecutorService e = Executors.newFixedThreadPool(1);
+        for(int i=0;i<1;i++){
             e.execute(new Runnable() {
                 @Override
                 public void run() {
@@ -28,7 +35,7 @@ public class TestExecutors {
             });
         }
         try {
-            TimeUnit.SECONDS.sleep(10);
+            this.wait();
         } catch (InterruptedException e1) {
             e1.printStackTrace();
         }
